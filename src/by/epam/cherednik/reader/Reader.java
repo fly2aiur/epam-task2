@@ -15,15 +15,12 @@ public class Reader {
 
     public String readFileAsString(String pathname) throws DataFileException {
         LOGGER.log(Level.DEBUG, "Reading file: " + pathname);
-
         StringBuilder dataString = new StringBuilder();
-
         try (BufferedReader reader = new BufferedReader(new FileReader(new File(pathname)))) {
             reader.lines().forEach(dataString::append);
         } catch (IOException e) {
             throw new DataFileException("Error occurred while reading data file: " + pathname, e);
         }
-
         return dataString.toString();
     }
 }

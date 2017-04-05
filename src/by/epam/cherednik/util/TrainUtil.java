@@ -28,9 +28,27 @@ public class TrainUtil {
         return result;
     }
 
+    public void sortCart(Train train, Sorting sorting) {
+        train.getCars().sort(sorting.getComparator());
+    }
+
+    public List<AbstractCar> findByPassengers(Train train, int passengers) {
+        return getPassengerCars(train).stream()
+                .filter(o -> ((AbstractPassengerCar) o).getMaxPassengers() > passengers).collect(Collectors.toList());
+    }
+
+    public List<AbstractCar> getPassengerCars(Train train) {
+        return train.getCars().stream()
+                .filter(o -> o instanceof AbstractPassengerCar).collect(Collectors.toList());
+    }
+
+    public List<AbstractCar> getFreightCars(Train train) {
+        return train.getCars().stream()
+                .filter(o -> o instanceof AbstractFreightCar).collect(Collectors.toList());
+    }
+
     public static enum Sorting{
         TYPE, ID, TYPE_AND_ID;
-
         Comparator<AbstractCar> getComparator(){
             Comparator<AbstractCar> comparator = null;
             switch (this){
@@ -46,24 +64,5 @@ public class TrainUtil {
             }
             return comparator;
         }
-    }
-
-    public void sortCart(Train train, Sorting sorting){
-        train.getCars().sort(sorting.getComparator());
-    }
-
-    public List<AbstractCar> findByPassengers(Train train, int passengers) {
-        return getPassengerCars(train).stream()
-                .filter(o -> ((AbstractPassengerCar)o).getMaxPassengers() > passengers).collect(Collectors.toList());
-    }
-
-    public List<AbstractCar> getPassengerCars(Train train) {
-        return  train.getCars().stream()
-                .filter(o -> o instanceof AbstractPassengerCar).collect(Collectors.toList());
-    }
-
-    public List<AbstractCar> getFreightCars(Train train) {
-        return  train.getCars().stream()
-                .filter(o -> o instanceof AbstractFreightCar).collect(Collectors.toList());
     }
 }

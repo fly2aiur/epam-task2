@@ -27,9 +27,7 @@ public class CoachCar extends AbstractPassengerCar {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         CoachCar coachCar = (CoachCar) o;
-
         return getId() == coachCar.getId()
                 && getMaxPassengers() == coachCar.getMaxPassengers()
                 && getSeatDistribution() == coachCar.getSeatDistribution();

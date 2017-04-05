@@ -93,7 +93,6 @@ class UnitParser {
             }
         } else {
             throw new ParserException("Couldn't find max cargo weight");
-
         }
     }
 

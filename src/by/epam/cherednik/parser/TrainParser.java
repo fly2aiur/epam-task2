@@ -18,12 +18,9 @@ public class TrainParser {
 
     public ArrayList<Train> parseAllTrains(String source) {
         LOGGER.debug("Parsing trains from String");
-
         ArrayList<Train> trains = new ArrayList<>();
-
         Pattern p = Pattern.compile(TRAIN_PATTERN, Pattern.DOTALL);
         Matcher m = p.matcher(source);
-
         while (m.find()) {
             String trainString = m.group(2);
             try {
@@ -32,20 +29,15 @@ public class TrainParser {
                 LOGGER.error("Couldn't parse a train", e);
             }
         }
-
         LOGGER.debug("Successfully created " + trains.size() + " trains");
-
         return trains;
     }
 
     public Train parseTrain(String source) throws ParserException {
         LOGGER.debug("Parsing train from String " + source);
-
         ArrayList<AbstractCar> cars = new ArrayList<>();
-
         Pattern p = Pattern.compile(CAR_PATTERN, Pattern.DOTALL);
         Matcher m = p.matcher(source);
-
         while (m.find()) {
             String type = m.group(1);
             String params = m.group(2);
@@ -56,21 +48,17 @@ public class TrainParser {
                 LOGGER.error("Couldn't parse a vehicle", e);
             }
         }
-
         if (cars.isEmpty()) {
             throw new ParserException("Couldn't parse any cars");
         }
-
         Train train = new Train();
         cars.forEach(train::add);
-
         return train;
     }
 
     public AbstractCar parseVehicle(String type, String params) throws ParserException {
         AbstractCarParser parser;
         AbstractCar car;
-
         switch (type.toUpperCase()) {
             case "COACH_CAR":
                 parser = new CoachCarParser();

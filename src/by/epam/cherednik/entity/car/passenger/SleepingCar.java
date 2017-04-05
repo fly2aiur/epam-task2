@@ -19,12 +19,15 @@ public class SleepingCar extends AbstractPassengerCar {
     }
 
     @Override
+    public CarType getType() {
+        return CarType.SLEEPING_CAR;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         SleepingCar coachCar = (SleepingCar) o;
-
         return getId() == coachCar.getId()
                 && getMaxPassengers() == coachCar.getMaxPassengers()
                 && getBedsPerCompartment() == coachCar.getBedsPerCompartment();
@@ -46,10 +49,5 @@ public class SleepingCar extends AbstractPassengerCar {
                 ", maxPassengers=" + getMaxPassengers() +
                 ", bedsPerCompartment=" + getBedsPerCompartment() +
                 "} ";
-    }
-
-    @Override
-    public CarType getType() {
-        return CarType.SLEEPING_CAR;
     }
 }

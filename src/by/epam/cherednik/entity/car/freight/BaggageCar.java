@@ -10,6 +10,19 @@ public class BaggageCar extends AbstractFreightCar {
         this.maxCargoWeightPerPerson = maxCargoWeightPerPerson;
     }
 
+    public double getMaxCargoWeightPerPerson() {
+        return maxCargoWeightPerPerson;
+    }
+
+    public void setMaxCargoWeightPerPerson(double maxCargoWeightPerPerson) {
+        this.maxCargoWeightPerPerson = maxCargoWeightPerPerson;
+    }
+
+    @Override
+    public CarType getType() {
+        return CarType.BAGGAGE_CAR;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -32,14 +45,6 @@ public class BaggageCar extends AbstractFreightCar {
         return result;
     }
 
-    public double getMaxCargoWeightPerPerson() {
-        return maxCargoWeightPerPerson;
-    }
-
-    public void setMaxCargoWeightPerPerson(double maxCargoWeightPerPerson) {
-        this.maxCargoWeightPerPerson = maxCargoWeightPerPerson;
-    }
-
     @Override
     public String toString() {
         return "BaggageCar{" +
@@ -47,10 +52,5 @@ public class BaggageCar extends AbstractFreightCar {
                 ", maxCargoWeight=" + getMaxCargoWeight() +
                 ", maxCargoWeightPerPerson=" + getMaxCargoWeightPerPerson() +
                 "} ";
-    }
-
-    @Override
-    public CarType getType() {
-        return CarType.BAGGAGE_CAR;
     }
 }
