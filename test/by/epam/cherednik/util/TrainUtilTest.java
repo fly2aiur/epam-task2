@@ -52,45 +52,6 @@ public class TrainUtilTest {
     }
 
     @Test
-    public void sortByType() throws Exception {
-        Train sorted = new Train();
-        sorted.add(new CoachCar(26, 58, CoachCar.SeatDistribution.TWO_PLUS_TWO));
-        sorted.add(new SleepingCar(17, 24, 2));
-        sorted.add(new BaggageCar(33, 1200.2, 16.5));
-        sorted.add(new BaggageCar(14, 8800, 160));
-
-        trainUtil.sortCart(train, TrainUtil.Sorting.TYPE);
-
-        assertThat(train.getCars(), is(sorted.getCars()));
-    }
-
-    @Test
-    public void sortById() throws Exception {
-        Train sorted = new Train();
-        sorted.add(new BaggageCar(14, 8800, 160));
-        sorted.add(new SleepingCar(17, 24, 2));
-        sorted.add(new CoachCar(26, 58, CoachCar.SeatDistribution.TWO_PLUS_TWO));
-        sorted.add(new BaggageCar(33, 1200.2, 16.5));
-
-        trainUtil.sortCart(train, TrainUtil.Sorting.ID);
-
-        assertThat(train.getCars(), is(sorted.getCars()));
-    }
-
-    @Test
-    public void sortByTypeAndId() throws Exception {
-        Train sorted = new Train();
-        sorted.add(new CoachCar(26, 58, CoachCar.SeatDistribution.TWO_PLUS_TWO));
-        sorted.add(new SleepingCar(17, 24, 2));
-        sorted.add(new BaggageCar(14, 8800, 160));
-        sorted.add(new BaggageCar(33, 1200.2, 16.5));
-
-        trainUtil.sortCart(train, TrainUtil.Sorting.TYPE_AND_ID);
-
-        assertThat(train.getCars(), is(sorted.getCars()));
-    }
-
-    @Test
     public void findByPassengers() throws Exception {
         List<AbstractCar> expected = new ArrayList<>();
         expected.add(new CoachCar(26, 58, CoachCar.SeatDistribution.TWO_PLUS_TWO));

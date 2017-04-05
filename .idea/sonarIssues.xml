@@ -3,7 +3,27 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../EPAM Java Training/java-projects/Lab2/src/com/bsuir/danilchican/exception/FileReadException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../EPAM Java Training/java-projects/Lab2/src/com/bsuir/danilchican/exception/IllegalAirplaneType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../EPAM Java Training/java-projects/Lab2/tests/test/com/bsuir/danilchican/SuiteLabTest.java">
           <value>
             <set />
           </value>
@@ -18,12 +38,47 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/by/epam/cherednik/entity/car/CarType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/by/epam/cherednik/entity/car/freight/BaggageCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/by/epam/cherednik/entity/car/passenger/CoachCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/by/epam/cherednik/entity/car/passenger/SleepingCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/by/epam/cherednik/entity/train/Train.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/by/epam/cherednik/exception/FileReadException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/by/epam/cherednik/exception/IllegalAirplaneType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/by/epam/cherednik/parser/AbstractCarParser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/by/epam/cherednik/parser/SleepingCarParser.java">
           <value>
             <set />
           </value>
@@ -34,6 +89,26 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/by/epam/cherednik/parser/UnitParser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/by/epam/cherednik/reader/Reader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/by/epam/cherednik/util/TrainSorter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/by/epam/cherednik/util/TrainUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/by/epam/cherednik/util/comparator/TypeComparator.java">
           <value>
             <set />
           </value>
@@ -54,6 +129,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/test/by/epam/cherednik/parser/UnitParserTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/test/by/epam/cherednik/util/TrainSorterTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/test/by/epam/cherednik/util/TrainUtilTest.java">
           <value>
             <set />
           </value>
