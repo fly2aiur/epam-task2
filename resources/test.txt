@@ -1,0 +1,3 @@
+train{
+sleeping_car[id="17"; passengers="24"; beds_per_compartment="2.7"]
+}

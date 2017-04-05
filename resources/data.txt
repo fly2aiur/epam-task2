@@ -1,0 +1,11 @@
+train{
+sleeping_car[id="17"; passengers="24"; beds_per_compartment="2.7"]
+coach_car[id="26"; passengers="58"; seat_distribution="two_plus_two"];
+coach_car[id="29"; passengers="84"; seat_distribution="two_plus_three"];
+}
+train{
+sleeping_car[id="27"; passengers="24"; beds_per_compartment="2";]
+coach_car[id="-39"; passengers="-64"; seat_distribution="two_plus_three"];
+sleeping_car[id="18"; pasengers="28"; beds_per_compartment="4";]
+baggage_car[id="19" max_cargo_weight="5600" max_cargo_weight_per_passenger="60"]
+}
